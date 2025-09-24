@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moxi.cl — Galletas estilo New York</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Moxi.cl - Galletas estilo New York: packs, ofertas y pedidos. Envíos locales." />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header id="site-header" class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">
+        <img src="images/logo_moxi.png" alt="Logo Moxi" class="logo-img">
+      </a>
+
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Inicio</a></li>
+          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+          <li><a href="#envios" class="nav-link">Envíos y Pedidos</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button id="nav-toggle" aria-label="Abrir menú" class="nav-toggle" aria-expanded="false">
+        <span class="burger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CARRUSEL HERO -->
+  <section id="hero" class="hero">
+    <div class="carousel" aria-roledescription="carousel">
+      <div class="slides">
+        <div class="slide active">
+          <img src="images/carrusel_1.png" alt="Oferta 1" class="carousel-img">
+        </div>
+        <div class="slide">
+          <img src="images/carrusel_2.png" alt="Oferta 2" class="carousel-img">
+        </div>
+        <div class="slide">
+          <img src="images/carrusel_3.png" alt="Oferta 3" class="carousel-img">
+        </div>
+      </div>
+
+      <!-- controls -->
+      <button class="carousel-control prev" aria-label="Anterior">‹</button>
+      <button class="carousel-control next" aria-label="Siguiente">›</button>
+      <div class="carousel-indicators" role="tablist" aria-hidden="false"></div>
+    </div>
+  </section>
+
+  <!-- HOME / PRESENTACIÓN -->
+  <main>
+    <section id="home" class="section container home">
+      <div class="home-grid">
+        <div class="home-text">
+          <h2>Bienvenido a Moxi.cl 🍪</h2>
+          <p>Hacemos galletas al estilo New York: grandes, suaves por dentro y con ingredientes seleccionados. Perfectas para compartir o darte un gusto.</p>
+          <a href="#catalogo" class="btn secondary">Explora el catálogo</a>
+        </div>
+        <div class="home-image">
+            <!--Después agregar una imagen de captura desde nuestro instagram-->
+          <img src="images/galleta mostrando relleno.jpg" alt="Galleta Moxi mostrando relleno">
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="section container catalogo">
+      <h2>Catálogo</h2>
+      <p class="muted">Desliza para ver más productos en cada categoría.</p>
+
+      <!-- Ofertas -->
+      <h3>Ofertas</h3>
+      <div class="product-row">
+        <button class="scroll-btn left" aria-label="Anterior">‹</button>
+        <div class="cards scrollable" id="ofertas-row">
+          <!-- Product card -->
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?cookies,stack" alt="Pack oferta galletas">
+            </div>
+            <div class="card-body">
+              <h3>2x1 Pack Moxi (6 unidades)</h3>
+              <p class="desc">2 packs de 6 galletas — mezcla de clásicos y rellenos.</p>
+              <div class="card-meta">
+                <span class="price">$18.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20Moxi%2C%20quiero%20la%20promoci%C3%B3n%202x1%20(pack%206)" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?chocolate-cookie,crispy" alt="Oferta galleta con chocolate">
+            </div>
+            <div class="card-body">
+              <h3>Oferta: Individual rellena</h3>
+              <p class="desc">Galleta rellena de doble chocolate. Oferta por tiempo limitado.</p>
+              <div class="card-meta">
+                <span class="price">$3.500 <small class="old-price">$4.500</small></span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20la%20oferta%20individual%20rellena" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?bakery,cookies" alt="Combo pack oferta">
+            </div>
+            <div class="card-body">
+              <h3>Combo desayuno (4 unidades)</h3>
+              <p class="desc">Pack con 4 sabores seleccionados + descuento.</p>
+              <div class="card-meta">
+                <span class="price">$9.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20Moxi%2C%20quiero%20el%20Combo%20desayuno%20(4%20u)" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="scroll-btn right" aria-label="Siguiente">›</button>
+      </div>
+
+      <!-- Packs -->
+      <h3>Packs</h3>
+      <div class="product-row">
+        <button class="scroll-btn left" aria-label="Anterior">‹</button>
+        <div class="cards scrollable" id="packs-row">
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?cookie,box" alt="Pack 6 galletas">
+            </div>
+            <div class="card-body">
+              <h3>Pack 6 Clásicos</h3>
+              <p class="desc">6 galletas clásicas — ideal para compartir.</p>
+              <div class="card-meta">
+                <span class="price">$12.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20el%20Pack%206%20Cl%C3%A1sicos" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?cookies,pack" alt="Pack 12 galletas">
+            </div>
+            <div class="card-body">
+              <h3>Pack 12 Mix</h3>
+              <p class="desc">12 unidades con 4 sabores diferentes.</p>
+              <div class="card-meta">
+                <span class="price">$22.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20Moxi%2C%20quiero%20el%20Pack%2012%20Mix" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?cookies,assorted" alt="Pack regalo">
+            </div>
+            <div class="card-body">
+              <h3>Pack regalo (8 uni.)</h3>
+              <p class="desc">Caja para regalo, ideal para sorprender.</p>
+              <div class="card-meta">
+                <span class="price">$28.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20quiero%20el%20Pack%20regalo%20(8%20u)" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="scroll-btn right" aria-label="Siguiente">›</button>
+      </div>
+
+      <!-- Individuales Premium -->
+      <h3>Individuales Premium</h3>
+      <div class="product-row">
+        <button class="scroll-btn left" aria-label="Anterior">‹</button>
+        <div class="cards scrollable" id="premium-row">
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?gourmet-cookie" alt="Premium chocolate">
+            </div>
+            <div class="card-body">
+              <h3>Premium Triple Chocolate</h3>
+              <p class="desc">Relleno de ganache y topping de cacao.</p>
+              <div class="card-meta">
+                <span class="price">$5.500</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20la%20Premium%20Triple%20Chocolate" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?artisan-cookie" alt="Premium caramelo">
+            </div>
+            <div class="card-body">
+              <h3>Caramelo Salado Gourmet</h3>
+              <p class="desc">Caramelo artesanal y sal marina.</p>
+              <div class="card-meta">
+                <span class="price">$5.800</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20la%20Caramelo%20Salado%20Gourmet" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?gourmet,dessert" alt="Premium con nueces">
+            </div>
+            <div class="card-body">
+              <h3>Almendras y Miel</h3>
+              <p class="desc">Con almendras fileteadas y toque de miel.</p>
+              <div class="card-meta">
+                <span class="price">$6.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20la%20Almendras%20y%20Miel" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img-wrap">
+              <img src="https://source.unsplash.com/600x600/?gourmet,dessert" alt="Premium con nueces">
+            </div>
+            <div class="card-body">
+              <h3>Chocolate y Nutella</h3>
+              <p class="desc">Con chocolate belga y crema de Nutella.</p>
+              <div class="card-meta">
+                <span class="price">$6.000</span>
+                <a class="btn whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%2C%20quiero%20la%20Chocolate%20y%20Nutella" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <button class="scroll-btn right" aria-label="Siguiente">›</button>
+      </div>
+    </section>
+
+    <!-- ENVIOS Y PEDIDOS -->
+    <section id="envios" class="section container envios">
+      <h2>Envíos y Pedidos</h2>
+      <div class="envios-grid">
+        <div>
+          <h3>Zonas de cobertura</h3>
+          <ul>
+            <li>Valparaíso</li>
+            <li>Viña del Mar</li>
+            <li>Santiago (selectos sectores)</li>
+            <li>Retiro en local (previa coordinación)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Costos y tiempos</h3>
+          <p><strong>Envío estándar:</strong> $2.500 (1–3 días hábiles)</p>
+          <p><strong>Envío exprés:</strong> $5.000 (mismo día / según zona)</p>
+          <p><strong>Envío gratis</strong> en compras sobre $20.000*</p>
+        </div>
+        <div>
+          <h3>Cómo pedir</h3>
+          <ol>
+            <li>Selecciona tu producto en el catálogo.</li>
+            <li>Haz click en <em>Pedir por WhatsApp</em> o envíanos mensaje.</li>
+            <li>Coordinamos forma de pago y entrega.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="section container nosotros">
+      <h2>Nosotros</h2>
+      <div class="nosotros-grid">
+        <img src="https://source.unsplash.com/800x600/?bakery,kitchen" alt="Equipo Moxi horneando">
+        <div>
+          <p><strong>Moxi nació</strong> del gusto por las galletas grandes y con corazón. Somos un emprendimiento local que hornea por encargo con ingredientes de calidad y procesos artesanales.</p>
+          <p>Valoramos la cercanía, la frescura y la atención personalizada. Cada pedido se prepara con cariño.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Moxi.cl — Galletas estilo New York. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- Reemplaza YOUR_PHONE_NUMBER por tu número (ej: 56912345678) -->
+  <a id="whatsapp-fab" class="whatsapp-fab" href="https://wa.me/56920933232?text=Hola%20Moxi%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+      <path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.7.9 5.2 2.6 7.3L4 29l6.9-2.5C12.1 27.2 14 27.8 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
+      <path fill="#25D366" d="M16 3C9.4 3 4 8.4 4 15c0 2.7.9 5.2 2.6 7.3L4 29l6.9-2.5C12.1 27.2 14 27.8 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3z" opacity="0"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
