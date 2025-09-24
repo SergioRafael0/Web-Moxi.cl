@@ -15,13 +15,15 @@
 /* Basic reset */
 * {box-sizing: border-box}
 html,body{height:100%}
+html {
+  scroll-behavior: smooth;
+}
 body{
   margin:0;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color:#222;
   background:var(--bg);
   -webkit-font-smoothing:antialiased;
-  scroll-behavior: smooth;
 }
 
 /* Container utility */
@@ -179,12 +181,24 @@ body{
 .footer p{margin:0}
 
 /* WhatsApp FAB */
-.whatsapp-fab{
-  position:fixed;right:18px;bottom:18px;z-index:100;background:linear-gradient(180deg,var(--brand),var(--accent));width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-strong);
-  text-decoration:none;transform-origin:center;animation:fab-bounce 3s infinite;
+.whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 100;
+  /* Elimina el fondo degradado */
+  background: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-strong);
+  text-decoration: none;
+  transform-origin: center;
+  animation: fab-bounce 3s infinite;
 }
-@keyframes fab-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.whatsapp-fab svg{filter:drop-shadow(0 2px 4px rgba(0,0,0,0.18));}
 
 /* Product Scroll */
 .product-row {
