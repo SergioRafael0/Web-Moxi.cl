@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startAutoplay(){
     if(interval) clearInterval(interval);
-    interval = setInterval(() => { next(); }, 5000);
+    interval = setInterval(() => { next(); }, 3000); // Cambiado a 3 segundos
   }
   function resetAutoplay(){
     if(interval) clearInterval(interval);
@@ -136,7 +136,45 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCarousel();
   startAutoplay();
 
-  // Aqui estaba Contacto
+  // CAROUSEL TOUCH FOR MOBILE
+  function isMobile() {
+    return window.innerWidth <= 680;
+  }
+
+  const carousel = $('.carousel');
+  let startX = null;
+
+  // Tocar costado izquierdo/derecho para cambiar slide en móvil
+  carousel.addEventListener('click', function(e) {
+    if (!isMobile()) return;
+    const rect = carousel.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if (x < rect.width * 0.33) {
+      prev();
+      resetAutoplay();
+    } else if (x > rect.width * 0.66) {
+      next();
+      resetAutoplay();
+    }
+    // Si tocan el centro, no hace nada
+  });
+
+  // Swipe táctil (opcional, mejora UX)
+  carousel.addEventListener('touchstart', function(e) {
+    if (!isMobile()) return;
+    startX = e.touches[0].clientX;
+  });
+  carousel.addEventListener('touchend', function(e) {
+    if (!isMobile() || startX === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const delta = endX - startX;
+    if (Math.abs(delta) > 40) {
+      if (delta < 0) next();
+      else prev();
+      resetAutoplay();
+    }
+    startX = null;
+  });
 
   // Close mobile nav when clicking outside (optional)
   document.addEventListener('click', (e) => {
