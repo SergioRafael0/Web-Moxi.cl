@@ -199,4 +199,21 @@ document.addEventListener('DOMContentLoaded', () => {
       cards.scrollBy({ left: cards.offsetWidth * 0.8, behavior: 'smooth' });
     });
   });
+
+  // Premium Card Carousel (Individuales Premium)
+  $$('.premium-carousel').forEach(carousel => {
+    const slides = $$('.premium-slide', carousel);
+    let current = 0;
+    function showSlide(i) {
+      slides.forEach((img, idx) => {
+        img.classList.toggle('active', idx === i);
+      });
+    }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+    showSlide(current);
+    setInterval(nextSlide, 2000); // Cambia cada 2 segundos
+  });
 });
